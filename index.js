@@ -1,12 +1,12 @@
 'use strict';
-module.exports = class ChileanRut {
+class ChileanRut {
   constructor() {
   }
   format(Rut, digitoVerificador) {
     var sRut = Rut.toString();
     var sRutFormateado = '';
 
-    sRut = this.quitarFormato(sRut);
+    sRut = this.unformat(sRut);
     if (digitoVerificador) {
       var sDV = sRut.charAt(sRut.length - 1);
 
@@ -46,7 +46,7 @@ module.exports = class ChileanRut {
     return true;
   }
 
-  correctDigit(crut) {
+  correctValidatorDigit(crut) {
     var largo = crut.length;
     var rut = null;
     var dv = crut.charAt(largo - 1);
@@ -60,13 +60,13 @@ module.exports = class ChileanRut {
       rut = crut.charAt(0);
     }
 
-    this.digitoValido(dv);
+    this.validValidatorDigit(dv);
 
     if (rut === null || dv === null) {
       return 0;
     }
 
-    var dvr = this.getDigito(rut);
+    var dvr = this.getValidatorDigit(rut);
 
     if (dvr !== dv.toLowerCase()) {
       return false;
@@ -99,7 +99,7 @@ module.exports = class ChileanRut {
   }
 
   validate(_texto) {
-    var texto = this.quitarFormato(_texto);
+    var texto = this.unformat(_texto);
     var largo = texto.length;
     var i = 0;
     var j = 0;
@@ -115,7 +115,7 @@ module.exports = class ChileanRut {
     // verifica que los numeros correspondan a los de rut
     for (i = 0; i < largo; i = i + 1) {
       // numero o letra que no corresponda a los del rut
-      if (! this.digitoValido(texto.charAt(i))) {
+      if (! this.validValidatorDigit(texto.charAt(i))) {
         return false;
       }
     }
@@ -144,9 +144,11 @@ module.exports = class ChileanRut {
       invertido = invertido + dtexto.charAt(i);
     }
 
-    if (this.digitoCorrecto(texto)) {
+    if (this.correctValidatorDigit(texto)) {
       return true;
     }
     return false;
   }
 }
+
+module.exports = new ChileanRut();
