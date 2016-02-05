@@ -1,0 +1,24 @@
+{
+  "name": "chilean-rut",
+  "version": "1.0.0",
+  "description": "Validates, formats and deformats chilean rut (chilean tax Number)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tomascharad/chilean-rut.git"
+  },
+  "keywords": [
+    "Rut",
+    "ChileanRut",
+    "Validator"
+  ],
+  "author": "Tomás Charad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomascharad/chilean-rut/issues"
+  },
+  "homepage": "https://github.com/tomascharad/chilean-rut#readme"
+}
