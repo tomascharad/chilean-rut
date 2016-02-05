@@ -1,4 +1,4 @@
-module.exports = class RutValidator {
+module.exports = class ChileanRut {
   constructor() {
   }
   format(Rut, digitoVerificador) {
