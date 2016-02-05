@@ -68,7 +68,7 @@ class ChileanRut {
 
     var dvr = this.getValidatorDigit(rut);
 
-    if (dvr !== dv.toLowerCase()) {
+    if (dvr.toString() !== dv.toLowerCase()) {
       return false;
     }
     return true;
