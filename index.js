@@ -79,7 +79,7 @@ class ChileanRut {
     var suma = 0;
     var mul  = 2;
     var i = 0;
-    var res = suma % 11;
+    var res = 0;
 
     for (i = rut.length - 1; i >= 0; i = i - 1) {
       suma = suma + rut.charAt(i) * mul;
@@ -89,6 +89,7 @@ class ChileanRut {
         mul = mul + 1;
       }
     }
+    res = suma % 11
     if (res === 1) {
       return 'k';
     } else if (res === 0) {
