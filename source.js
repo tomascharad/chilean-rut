@@ -1,4 +1,3 @@
-'use strict';
 class ChileanRut {
   constructor() {
   }
@@ -152,4 +151,4 @@ class ChileanRut {
   }
 }
 
-module.exports = new ChileanRut();
+export default new ChileanRut();

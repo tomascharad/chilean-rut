@@ -1,19 +1,21 @@
 {
+  "extends": "eslint:recommended",
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
   },
   "globals": {
     "jQuery": false,
     "$": false,
     "_": false,
   },
-  "ecmaFeatures": {
-    "amd": true,
-    "jsx": true,
-    "modules": true
-  },
-  "env": {
-    "es6": true
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      },
   },
   "rules": {
     /*
@@ -91,7 +93,6 @@
     "no-caller": 2,
     "no-div-regex": 2,
     "no-else-return": 2,
-    "no-empty-label": 2,
     "no-eq-null": 2,
     "no-eval": 2,
     "no-extend-native": 2, // `2` is recommended, optionally set `[2, {"exceptions": ["Object"]}]`
@@ -187,13 +188,11 @@
     "semi-spacing": [1, {"before": false, "after": true}],
     "semi": [1, "always"],
     "sort-vars": 0, // optaionlly set `[2, {"ignoreCase": true}]`
-    "space-after-keywords": [1, "always"],
-    "space-before-keywords": [1, "always"],
+    "keyword-spacing": [2, {"before": true, "after": true, "overrides": {}}],
     "space-before-blocks": [1, "always"], // optionally set `[2, {"functions": "never", "keywords": "always"}]`
     "space-before-function-paren": [1, "never"], // optionally set `[2, {"anonymous": "always", "named": "never"}]`
     "space-in-parens": [1, "never"], // optionally set `[2, "always", {"exceptions": ["empty"]}]`
     "space-infix-ops": [1, {"int32Hint": false}],
-    "space-return-throw-case": 1,
     "space-unary-ops": [1, {"words": true, "nonwords": true}],
     "spaced-comment": [1, "always", {"exceptions": ["/"]}], // optionally set `[2, "always", {"exceptions": ["-", "+"], "markers": ["/"]}]`
     "wrap-regex": 1,
