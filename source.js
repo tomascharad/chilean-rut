@@ -151,4 +151,4 @@ class ChileanRut {
   }
 }
 
-export default ChileanRut;
+export default new ChileanRut();
