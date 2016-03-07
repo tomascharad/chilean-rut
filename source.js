@@ -1,4 +1,4 @@
-class ChileanRut {
+export class ChileanRut {
   constructor() {
   }
   format(Rut, digitoVerificador) {
@@ -150,5 +150,3 @@ class ChileanRut {
     return false;
   }
 }
-
-export default new ChileanRut();
