@@ -1,6 +1,6 @@
 {
   "name": "chilean-rut",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Validates, formats and deformats chilean rut (chilean tax Number)",
   "main": "index.js",
   "scripts": {
